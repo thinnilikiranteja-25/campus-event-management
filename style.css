@@ -1,0 +1,770 @@
+
+/* CampusEvents - Main Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fd;
+    color: #1d2939;
+    line-height: 1.6;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navigation */
+
+.navbar {
+    background: #ffffff;
+    min-height: 72px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #0754b8;
+}
+
+.logo span, footer h2 span {
+    color: #f49b27;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #344054;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #0754b8;
+}
+
+.student-info {
+    background: #edf4ff;
+    color: #0754b8;
+    padding: 9px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #0754b8;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 360px;
+    background: linear-gradient(115deg, #063d91, #0879dc);
+    color: white;
+    padding: 65px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin: 20px 0 15px;
+}
+
+.hero h1 span {
+    color: #ffd17a;
+}
+
+.hero p {
+    color: #e1edff;
+    font-size: 16px;
+    margin-bottom: 25px;
+    max-width: 540px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #ffad35;
+    color: #18314f;
+    padding: 12px 23px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background: #ffc568;
+    transform: translateY(-2px);
+}
+
+.hero-art {
+    width: 270px;
+    height: 240px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.hero-icon {
+    font-size: 105px;
+}
+
+.floating-icon {
+    position: absolute;
+    top: 12px;
+    right: -5px;
+    background: white;
+    padding: 14px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.floating-icon.second {
+    top: auto;
+    bottom: 5px;
+    right: auto;
+    left: -12px;
+}
+
+/* Search */
+
+.search-section {
+    padding: 30px 5%;
+    margin-top: -1px;
+}
+
+.search-box {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #d9e4f2;
+    border-radius: 10px;
+    padding: 7px 9px 7px 17px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    gap: 12px;
+}
+
+.search-box span {
+    font-size: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    min-width: 0;
+    font-size: 14px;
+}
+
+.search-box button {
+    background: #0754b8;
+    color: white;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: #063d91;
+}
+
+/* Section Headings */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    color: #18375e;
+    font-size: 24px;
+}
+
+.section-heading p {
+    color: #7b8798;
+    font-size: 14px;
+}
+
+.event-count {
+    background: #e9f2ff;
+    color: #0754b8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Categories */
+
+.categories {
+    padding-top: 12px;
+    padding-bottom: 35px;
+}
+
+.category-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 11px 18px;
+    background: white;
+    color: #344054;
+    border: 1px solid #dce5f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #0754b8;
+    border-color: #0754b8;
+    color: white;
+}
+
+/* Event Cards */
+
+#events {
+    padding-top: 15px;
+    padding-bottom: 65px;
+    scroll-margin-top: 90px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e6ecf4;
+    box-shadow: 0 4px 15px rgba(22,50,90,0.05);
+    transition: 0.25s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22,50,90,0.12);
+}
+
+.event-banner {
+    height: 155px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-size: 65px;
+}
+
+.event-banner.technical {
+    background: linear-gradient(120deg, #dcecff, #a8ccff);
+}
+
+.event-banner.cultural {
+    background: linear-gradient(120deg, #ffe5ec, #ffc0d1);
+}
+
+.event-banner.sports {
+    background: linear-gradient(120deg, #e0f7e9, #a9e8c2);
+}
+
+.event-banner.workshop {
+    background: linear-gradient(120deg, #fff1d6, #ffdaa0);
+}
+
+.event-banner.seminar {
+    background: linear-gradient(120deg, #e9e1ff, #cbb9ff);
+}
+
+.category-label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: white;
+    color: #0754b8;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 11px;
+    border-radius: 20px;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-body h3 {
+    color: #18375e;
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.event-description {
+    color: #7b8798;
+    font-size: 13px;
+    min-height: 42px;
+    margin-bottom: 13px;
+}
+
+.event-meta {
+    display: grid;
+    gap: 7px;
+    font-size: 13px;
+    color: #586779;
+    margin-bottom: 16px;
+}
+
+.event-actions {
+    display: flex;
+    gap: 9px;
+}
+
+.event-actions button {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.details-btn {
+    background: #edf4ff;
+    color: #0754b8;
+}
+
+.register-btn {
+    background: #0754b8;
+    color: white;
+}
+
+.details-btn:hover {
+    background: #dbeaff;
+}
+
+.register-btn:hover {
+    background: #063d91;
+}
+
+.register-btn:disabled {
+    background: #198754;
+    cursor: default;
+}
+
+.empty-state {
+    background: white;
+    border: 1px dashed #cbd8e8;
+    padding: 45px 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #7b8798;
+    grid-column: 1 / -1;
+}
+
+/* My Registrations */
+
+.registrations-section {
+    background: #eaf2fc;
+    padding: 55px 0;
+    scroll-margin-top: 75px;
+}
+
+.registration-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.registration-card {
+    background: white;
+    padding: 19px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #e4ebf5;
+}
+
+.registration-card h3 {
+    color: #18375e;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.registration-card p {
+    font-size: 13px;
+    color: #7b8798;
+}
+
+.cancel-btn {
+    background: #fff0f0;
+    color: #d13b3b;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cancel-btn:hover {
+    background: #ffdddd;
+}
+
+/* Modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(12,28,50,0.65);
+    z-index: 200;
+    padding: 20px;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 510px;
+    padding: 30px;
+    border-radius: 13px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: appear 0.2s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    background: none;
+    border: none;
+    font-size: 29px;
+    cursor: pointer;
+    color: #68778b;
+}
+
+.modal-content h2 {
+    color: #0754b8;
+    margin-bottom: 8px;
+    padding-right: 20px;
+}
+
+.modal-content p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+.form-description {
+    margin-bottom: 20px;
+}
+
+#registrationForm {
+    display: grid;
+    gap: 10px;
+}
+
+#registrationForm label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #344054;
+    margin-top: 5px;
+}
+
+#registrationForm input,
+#registrationForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8e1ec;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+}
+
+#registrationForm input:focus,
+#registrationForm select:focus {
+    border-color: #0754b8;
+    box-shadow: 0 0 0 3px #0754b81c;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* Toast Notification */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #18375e;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.25s;
+    z-index: 300;
+    pointer-events: none;
+    max-width: calc(100% - 40px);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+
+footer {
+    background: #092b57;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #c4d5ed;
+}
+
+.copyright {
+    margin-top: 18px;
+    border-top: 1px solid #315174;
+    padding-top: 16px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-art {
+        margin-right: 0;
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .student-info {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: white;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        padding: 48px 6%;
+        min-height: auto;
+    }
+
+    .hero-art {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .search-section {
+        padding: 22px 5%;
+    }
+
+    .search-box {
+        gap: 7px;
+        padding: 6px 8px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+    }
+
+    .search-box button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .category-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .category-btn {
+        white-space: nowrap;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .registration-list {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-card {
+        align-items: flex-start;
+    }
+
+    .modal-content {
+        padding: 25px 19px;
+    }
+
+    .toast {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .registration-card {
+        flex-direction: column;
+    }
+
+    .cancel-btn {
+        width: 100%;
+    }
+}

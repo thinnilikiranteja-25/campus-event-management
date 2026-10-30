@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEvents | College Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="logo">Campus<span>Events</span></a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#events">Explore Events</a>
+            <a href="#registrations">My Registrations</a>
+        </nav>
+
+        <div class="student-info">
+            <span>🎓 Student Portal</span>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tag">YOUR CAMPUS, YOUR OPPORTUNITIES</span>
+            <h1>Discover. Participate.<br><span>Make Memories.</span></h1>
+            <p>
+                Explore exciting college events, workshops, competitions
+                and activities. Never miss an opportunity on campus!
+            </p>
+            <a href="#events" class="primary-btn">Explore Events →</a>
+        </div>
+
+        <div class="hero-art">
+            <div class="hero-icon">🎓</div>
+            <div class="floating-icon">🏆</div>
+            <div class="floating-icon second">🎤</div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-box">
+            <span>🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events, workshops, competitions..."
+                aria-label="Search events"
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="categories container">
+        <div class="section-heading">
+            <div>
+                <h2>Explore Categories</h2>
+                <p>Find events based on your interests</p>
+            </div>
+        </div>
+
+        <div class="category-list">
+            <button class="category-btn active" data-category="All">🌐 All Events</button>
+            <button class="category-btn" data-category="Technical">💻 Technical</button>
+            <button class="category-btn" data-category="Cultural">🎭 Cultural</button>
+            <button class="category-btn" data-category="Sports">⚽ Sports</button>
+            <button class="category-btn" data-category="Workshop">🛠️ Workshop</button>
+            <button class="category-btn" data-category="Seminar">🎤 Seminar</button>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <main class="container" id="events">
+        <div class="section-heading event-heading">
+            <div>
+                <h2>Upcoming Events</h2>
+                <p>Find something exciting happening on your campus.</p>
+            </div>
+            <span class="event-count" id="eventCount">0 Events</span>
+        </div>
+
+        <div class="event-grid" id="eventGrid"></div>
+    </main>
+
+    <!-- My Registrations -->
+    <section class="registrations-section" id="registrations">
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <h2>My Registrations</h2>
+                    <p>Manage the events you have registered for.</p>
+                </div>
+                <span class="event-count" id="registrationCount">0 Registered</span>
+            </div>
+
+            <div class="registration-list" id="registrationList"></div>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <button class="close-btn" data-close="detailsModal" aria-label="Close">&times;</button>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+
+    <!-- Student Registration Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content form-modal">
+            <button class="close-btn" data-close="registerModal" aria-label="Close">&times;</button>
+
+            <h2>Student Event Registration</h2>
+            <p class="form-description">Enter your details to register for this event.</p>
+
+            <form id="registrationForm">
+                <input type="hidden" id="selectedEventId">
+
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+
+                <label for="studentRoll">Roll Number</label>
+                <input type="text" id="studentRoll" placeholder="Enter your roll number" required>
+
+                <label for="studentEmail">College Email</label>
+                <input type="email" id="studentEmail" placeholder="Enter your email" required>
+
+                <label for="studentDept">Department</label>
+                <select id="studentDept" required>
+                    <option value="">Select Department</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Electrical Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit" class="primary-btn full-btn">Confirm Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Campus<span>Events</span></h2>
+            <p>Making every campus opportunity count.</p>
+            <p class="copyright">© 2026 CampusEvents. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
